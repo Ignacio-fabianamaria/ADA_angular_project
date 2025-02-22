@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 20px;
+  align-items: center;
+  border-bottom: 1px black solid;
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    li {
+      margin: 20px;
+    }
+  }
+}
