@@ -1,0 +1,29 @@
+main {
+  margin: 20px;
+  min-height: 750px;
+  .movies-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .movie {
+    width: fit-content;
+    border: 1px black solid;
+    img {
+      width: 250px;
+      height: 375px;
+    }
+
+    .movie-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .movie-extra-info {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

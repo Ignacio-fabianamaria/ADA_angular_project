@@ -1,4 +1,21 @@
-footer {
-  border-top: 1px black solid;
-  text-align: center;
+main {
+  margin: 20px;
+  min-height: 750px;
+  .movies-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .movie {
+    width: fit-content;
+    border: 1px black solid;
+    img {
+      height: 250px;
+    }
+
+    .movie-extra-info {
+      padding: 20px;
+    }
+  }
 }

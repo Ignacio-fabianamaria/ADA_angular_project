@@ -1,0 +1,23 @@
+.movie {
+  width: fit-content;
+  border: 1px black solid;
+  img {
+    width: 250px;
+    height: 375px;
+  }
+
+  .title{
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .movie-info {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .movie-extra-info {
+    display: flex;
+    justify-content: space-between;
+  }
+}
