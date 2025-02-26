@@ -1,4 +1,13 @@
-footer {
-  border-top: 1px black solid;
-  text-align: center;
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #E5E5E5;
+  color: #171817;
+  padding: 10px 0;
+  font-weight: 400;
+  font-size: 15px;
 }
