@@ -29,9 +29,18 @@ ng g c common/footer
 # Criar os componentes 'movie-container' e 'movie' dentro da pasta 'movie'
 ng g c movie/movie-container
 ng g c movie/movie
+
+# Criar os componentes 'contacts' dentro da pasta 'contacts'
+ng g c contacts/contacts
+
+# Criar o componente 'admin' dentro da pasta 'admin'
+ng g c admin/admin
+
+# Criar o componente 'playground' dentro da pasta 'playground'
+ng g c playground/playground
 ```
 
-__💡 Observação: Ao passar o caminho antes do nome do componente (common/header, movie/movie-container), o Angular cria automaticamente a estrutura de pastas caso elas ainda não existam. Isso ajuda a manter o projeto mais organizado.__
+__💡 Observação: Ao passar o caminho antes do nome do componente (common/header, movie/movie-container), o Angular cria automaticamente a estrutura de pastas caso elas ainda não existam. Isso ajuda a manter o projeto mais organizadoAo passar o caminho antes do nome do componente (common/header, movie/movie-container), o Angular cria automaticamente a estrutura de pastas caso elas ainda não existam. Isso ajuda a manter o projeto mais organizado.__
 
 
 ## 🎥 Estrutura do Componente de Filmes
