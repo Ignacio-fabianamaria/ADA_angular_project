@@ -1,7 +1,7 @@
 <div class="movie">
   <img [src]="movie.image" alt="">
   <div class="movie-info">
-    <p class="title">{{movie.title}}</p>
+    <p class="title">{{movie.title | uppercase}}</p>
     <div class="movie-extra-info">
       <p>Ano: {{ movie.year}}</p>
       <p>Nota: {{movie.score}}/10</p>
