@@ -1,10 +1,14 @@
-<div class="movie">
-  <img [src]="movie.image" alt="">
-  <div class="movie-info">
-    <p class="title">{{movie.title | pipetoUpper}}</p>
-    <div class="movie-extra-info">
-      <p>Ano: {{ movie.year}}</p>
-      <p>Nota: {{movie.score | addStar }}</p>
+<mat-card class="movie">
+  <mat-card-content>
+    <div class="movie" (click)="movieClick()">
+      <img [src]="movie.image" alt="" />
+      <div class="movie-info">
+        <p class="title">{{movie.title | pipetoUpper}}</p>
+        <div class="movie-extra-info">
+          <p>Ano: {{ movie.year }}</p>
+          <p>Nota: {{movie.score | addStar }}</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </mat-card-content>
+</mat-card>

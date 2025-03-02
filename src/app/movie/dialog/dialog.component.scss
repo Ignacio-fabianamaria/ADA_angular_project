@@ -1,0 +1,35 @@
+.modal-container {
+  width: 500px;
+  padding: 20px;
+
+  background-color: #FAFAFA;
+  color: #171817;
+
+  h1 {
+    margin-bottom: 0px;
+  }
+
+  .content {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+    img {
+      width: 150px;
+      height: 275px;
+      border-radius: 5px;
+    }
+  }
+
+  .group-info-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .flex-space-between {
+    margin-top: 10px;
+  }
+}

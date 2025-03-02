@@ -1,1 +1,25 @@
-<p>dialog works!</p>
+<mat-card class="modal-container">
+  <h1>{{movie.title}}</h1>
+  <mat-divider></mat-divider>
+  <div class="content">
+    <img [src]="movie.image" alt="movie.title" />
+    <div>
+      <div class="info-block">
+        <label for="sinopse"><strong>Sinopse</strong></label>
+        <p id="sinopse">{{movie.sinopse}}</p>
+      </div>
+        <div class="info-block">
+          <label for="sinopse"><strong>Data de Lançamento</strong></label>
+          <p id="sinopse">{{movie.year}}</p>
+        </div>
+        <div class="info-block">
+          <label for="sinopse"><strong>Nota</strong></label>
+          <p id="sinopse">{{movie.score | addStar}}</p>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="flex-space-between">
+      </div>
+    </div>
+
+</mat-card>
