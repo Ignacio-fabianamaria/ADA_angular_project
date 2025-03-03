@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
-import { MovieComponent } from './movie/movie/movie.component';
 import { MovieContainerComponent } from './movie/movie-container/movie-container.component';
 
 @Component({
