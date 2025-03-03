@@ -3,6 +3,6 @@ import { MovieContainerComponent } from './movie/movie-container/movie-container
 import { PlaygroundComponent } from './playground/playground/playground.component';
 
 export const routes: Routes = [
-  { path: 'filmes', component:MovieContainerComponent},
+  { path: '', component:MovieContainerComponent},
   { path: 'playground', component:PlaygroundComponent}
 ];
