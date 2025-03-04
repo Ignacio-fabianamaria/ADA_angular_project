@@ -1,1 +1,16 @@
-<p>admin works!</p>
+<div class="admin-container">
+  <h1>Adicionar um filme</h1>
+  <form (submit)="save()">
+    <mat-form-field>
+      <mat-label>Link da imagem:</mat-label>
+      <input [(ngModel)]="movie.image"  name="image" matInput placeholder="https://imagem-do-filme.jpg" required>
+    </mat-form-field>
+    
+    <div class="button-container">
+      <button mat-flat-button type="button">Limpar</button>
+      <button mat-flat-button type="submit">Adicionar</button>
+    </div>
+
+  </form>
+</div>
+

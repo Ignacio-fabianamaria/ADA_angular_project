@@ -25,8 +25,4 @@ handleMovieClick(movie: any): void {
     data: movie,
   });
 }
-
-public addMovie(): void {
-  this.router.navigate(['add-movie']);
-}
 }
