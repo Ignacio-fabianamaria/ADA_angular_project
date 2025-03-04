@@ -16,6 +16,15 @@
   mat-form-field{
     width: 100%;
   }
+  div{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
   .button-container{
     width: 100%;
     display: flex;

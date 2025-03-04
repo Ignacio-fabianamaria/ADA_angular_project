@@ -1,13 +1,34 @@
 <div class="admin-container">
-  <h1>Adicionar um filme</h1>
-  <form (submit)="save()">
+  <h1>📽️ Registrar Filme e Avaliação</h1>
+  <form [formGroup]="form" (submit)="save()">
     <mat-form-field>
       <mat-label>Link da imagem:</mat-label>
-      <input [(ngModel)]="movie.image"  name="image" matInput placeholder="https://imagem-do-filme.jpg" required>
+      <input formControlName="image" matInput placeholder="https://imagem-do-filme.jpg" required>
+      @if (form.controls['image'].invalid){<mat-error>O campo é obrigatório</mat-error>}
     </mat-form-field>
-    
+    <mat-form-field>
+      <mat-label>Nome do Filme:</mat-label>
+      <input formControlName="image" matInput required>
+      @if (form.controls['title'].invalid){ <mat-error>O campo é obrigatório</mat-error>}
+    </mat-form-field>
+    <div>
+      <mat-form-field>
+        <mat-label>Ano de Lançamento:</mat-label>
+        <input formControlName="year" matInput placeholder="2005" required>
+        @if (form.controls['year'].invalid){<mat-error>O campo é obrigatório</mat-error>}
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nota:</mat-label>
+        <input formControlName="score" matInput placeholder="10" required>
+        @if (form.controls['year'].invalid){<mat-error>O campo é obrigatório</mat-error>}
+      </mat-form-field>
+    </div>
+    <mat-form-field>
+      <mat-label>Sinopse:</mat-label>
+      <textarea matInput formControlName="sinopse" required=""></textarea>
+    </mat-form-field>
     <div class="button-container">
-      <button mat-flat-button type="button">Limpar</button>
+      <button mat-stroked-button type="button">Limpar</button>
       <button mat-flat-button type="submit">Adicionar</button>
     </div>
 

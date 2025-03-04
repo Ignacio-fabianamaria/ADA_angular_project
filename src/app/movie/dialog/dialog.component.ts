@@ -19,7 +19,7 @@ movie: any;
 
 constructor(
   @Inject(MAT_DIALOG_DATA) private data: any,
-  private dialogRef: MatDialogRef<MovieDialogComponent> // Injetando MatDialogRef
+  private dialogRef: MatDialogRef<MovieDialogComponent> 
 ) {
   this.movie = data;
 }

@@ -1,7 +1,7 @@
 .movie {
   width: fit-content;
-  background-color: #FAFAFA;
-  color: #171817;
+  background-color:#DBC6C1;
+  color: #5B005B;
   transition: transform 0.3s ease;
 
   &:hover {
@@ -12,6 +12,10 @@
     width: 250px;
     height: 375px;
     border-radius: 5px;
+  }
+
+  .title{
+    font-weight: 800;
   }
 
   .movie-info {
