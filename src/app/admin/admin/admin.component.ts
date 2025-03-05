@@ -26,21 +26,22 @@ constructor(private fb: FormBuilder, private movieService: MovieService){
     sinopse: ['', [Validators.required]]
   })
 }
-/*
+
 public save():void{
   console.log(this.form.value);
 if (this.form.invalid){
   return
 }
 console.log(this.form.value);
-} */
-save(): void {
+}
+/* save(): void {
   if (this.form.invalid) {
     return;
   }
+console.log(this.form);
 
-  /* this.movieService.save({ ...this.form.value } as Movie).subscribe((res) => {
+   this.movieService.save({ ...this.form.value } as Movie).subscribe((res) => {
     console.log(res);
-  }); */
-}
+  });
+} */
 }
