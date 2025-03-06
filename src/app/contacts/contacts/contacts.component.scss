@@ -1,0 +1,38 @@
+
+.admin-container{
+  margin: 20px;
+  min-height: 750px;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    width: 60%;
+ }
+
+  mat-form-field{
+    width: 100%;
+  }
+  div{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+  .button-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+}
+
+
+

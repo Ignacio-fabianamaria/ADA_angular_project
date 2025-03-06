@@ -1,1 +1,29 @@
-<p>contacts works!</p>
+<div class="admin-container">
+  <h1>💬 ✉️ Deixe sua mensagem</h1>
+  <form [formGroup]="form" (submit)="save()">
+    <mat-form-field>
+      <mat-label>Nome:</mat-label>
+      <input formControlName="name" matInput required>
+      @if (form.controls['name'].invalid){<mat-error>O campo é obrigatório</mat-error>}
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>E-mail:</mat-label>
+      <input formControlName="email" matInput required>
+      @if (form.controls['email'].invalid){ <mat-error>O campo é obrigatório</mat-error>}
+    </mat-form-field>
+      <mat-form-field>
+        <mat-label>Assunto</mat-label>
+        <input formControlName="subject" matInput  required>
+        @if (form.controls['subject'].invalid){<mat-error>O campo é obrigatório</mat-error>}
+      </mat-form-field>
+    <mat-form-field>
+      <mat-label>Mensagem:</mat-label>
+      <textarea matInput formControlName="message" required=""></textarea>
+    </mat-form-field>
+    <div class="button-container">
+      <button mat-stroked-button type="button">Limpar</button>
+      <button mat-flat-button type="submit">Adicionar</button>
+    </div>
+  </form>
+</div>
+
