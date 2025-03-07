@@ -16,6 +16,8 @@ export class PipesPipe implements PipeTransform {
 export class AddStarPipe implements PipeTransform {
 
   transform(value: number): string {
+    console.log(value);
+
     // Verificar se a nota é igual a 10 e adicionar a estrela apenas nessa condição
     if (value === 10) {
       return `${value}/10 ⭐`;  // Quando for 10, adiciona a estrela

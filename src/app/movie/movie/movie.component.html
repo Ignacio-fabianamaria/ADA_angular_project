@@ -1,7 +1,7 @@
 <mat-card class="movie">
   <mat-card-content>
-    <div class="movie" (click)="movieClick()">
-      <img [src]="movie.image" alt="" />
+    <div class="movie" (click)="movieClick()" *ngFor="let movie of movies$ | async">
+      <img [src]="movie.image" alt="movie.title" />
       <div class="movie-info">
         <p class="title">{{movie.title | pipetoUpper}}</p>
         <div class="movie-extra-info">

@@ -11,7 +11,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatButton } from '@angular/material/button';
-import { MovieService } from '../../movie/movie.service';
+import { Movie, MovieService } from '../../movie/movie.service';
 
 @Component({
   selector: 'app-admin',
@@ -36,25 +36,26 @@ export class AdminComponent {
       title: ['', [Validators.required]],
       year: ['', [Validators.required]],
       score: ['', [Validators.required]],
-      sinopse: ['', [Validators.required]],
+      synopsis: ['', [Validators.required]],
     });
   }
 
-  public save(): void {
+/*   public save(): void {
     console.log(this.form.value);
     if (this.form.invalid) {
       return;
     }
     console.log(this.form.value);
-  }
-  /* save(): void {
-  if (this.form.invalid) {
-    return;
-  }
-console.log(this.form);
+  } */
+    save(): void {
+      if (this.form.invalid) {
+        return;
+      }
+      console.log(this.form.value);
 
-   this.movieService.save({ ...this.form.value } as Movie).subscribe((res) => {
-    console.log(res);
-  });
-} */
+      this.movieService.save({ ...this.form.value } as Movie).subscribe((res) => {
+        console.log(res);
+      });
+    }
+
 }
