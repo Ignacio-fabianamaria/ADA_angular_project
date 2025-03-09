@@ -19,3 +19,17 @@ a{
   text-decoration: none;
 }
 }
+
+.ngrx-container
+{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  mat-card{
+    margin: 10px;
+    background-color: #DBC6C1;
+    border: none;
+    width: 60%;
+  }
+}

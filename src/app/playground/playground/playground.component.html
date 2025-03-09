@@ -15,17 +15,31 @@
     </p>
   </div>
   <mat-divider></mat-divider>
-  <div class="flux-container">
+  <div class="ngrx-container">
+    <div>
     <h1>NgRx no Angular: Gerenciamento de Estado</h1>
     <p>
       O NgRx é uma biblioteca para gerenciamento de estado no Angular, baseada no padrão Redux. Ele permite gerenciar o estado global da aplicação de maneira previsível, escalável e reativa usando RxJS.
     </p>
+    <h2>Instalação do NgRx</h2>
+<ul>
+  <li><code>ng add &#64;ngrx/store</code></li>
+  <li><code>ng add &#64;ngrx/effects</code></li>
+  <li><code>ng add &#64;ngrx/store-devtools</code></li>
+</ul>
     <p>
       Para mais informações, acesse a
       <a href="https://ngrx.io/docs" target="_blank" rel="noopener noreferrer">
         documentação oficial do NGRX.
       </a>
     </p>
+    </div>
+    <mat-card appearance="outlined">
+      <mat-card-content>
+        <h3>Contador</h3>
+        <app-ngrx-counter></app-ngrx-counter>
+      </mat-card-content>
+    </mat-card>
   </div>
   <mat-divider></mat-divider>
   <div class="material-container">
