@@ -1,6 +1,6 @@
 <main>
   <h1> 🍿 Diário de Filmes</h1>
   <div class="movies-container">
-    <app-movie *ngFor="let movie of movies$ | async" ></app-movie>
+    <app-movie *ngFor="let movie of movies$ | async" [movie]="movie" ></app-movie>
   </div>
 </main>

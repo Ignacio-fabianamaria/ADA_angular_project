@@ -8,21 +8,22 @@
     <img [src]="movie.image" alt="movie.title" />
     <div>
       <div class="info-block">
-        <label for="sinopse"><strong>Sinopse</strong></label>
-        <p id="sinopse">{{movie.sinopse}}</p>
+        <label for="synopsis"><strong>Sinopse:</strong></label>
+        <p id="synopsis">{{movie.synopsis}}</p>
       </div>
         <div class="info-block">
-          <label for="sinopse"><strong>Data de Lançamento</strong></label>
-          <p id="sinopse">{{movie.year}}</p>
+          <label for="year"><strong>Data de Lançamento</strong></label>
+          <p id="year">{{movie.year}}</p>
         </div>
         <div class="info-block">
-          <label for="sinopse"><strong>Nota</strong></label>
-          <p id="sinopse">{{movie.score | addStar}}</p>
+          <label for="score"><strong>Nota</strong></label>
+          <p id="score">{{movie.score | addStar}}</p>
         </div>
       </div>
-      <mat-divider></mat-divider>
-      <div class="flex-space-between">
-      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="flex-space-between">
+      <mat-icon (click)="delete()">delete</mat-icon>
     </div>
 
 </mat-card>

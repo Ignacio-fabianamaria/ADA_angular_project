@@ -1,6 +1,6 @@
 <mat-card class="movie">
   <mat-card-content>
-    <div class="movie" (click)="movieClick()" *ngFor="let movie of movies$ | async">
+    <div class="movie" (click)="movieClick()" *ngIf="movie; else noMovieFound" >
       <img [src]="movie.image" alt="movie.title" />
       <div class="movie-info">
         <p class="title">{{movie.title | pipetoUpper}}</p>
@@ -10,5 +10,6 @@
         </div>
       </div>
     </div>
+    <ng-template #noMovieFound> 404 not found </ng-template>
   </mat-card-content>
 </mat-card>

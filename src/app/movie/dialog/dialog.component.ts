@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { AddStarPipe } from '../../pipes.pipe';
+import { MovieService } from '../movie.service';
 
 
 
@@ -19,7 +20,8 @@ movie: any;
 
 constructor(
   @Inject(MAT_DIALOG_DATA) private data: any,
-  private dialogRef: MatDialogRef<MovieDialogComponent> 
+  private dialogRef: MatDialogRef<MovieDialogComponent>,
+  private movieService: MovieService,
 ) {
   this.movie = data;
 }
@@ -27,4 +29,13 @@ constructor(
 public closeDialog(): void {
   this.dialogRef.close();
 }
+public delete(): void {
+  this.movieService.deleteMovie(this.movie._id).subscribe({
+    next: () => {
+      console.log('Filme deletado com sucesso!');
+      this.dialogRef.close(true); // Fecha o diálogo indicando sucesso
+    }
+  });
 }
+}
+

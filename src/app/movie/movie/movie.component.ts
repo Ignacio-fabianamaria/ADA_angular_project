@@ -6,27 +6,26 @@ import {MatCardModule} from '@angular/material/card';
 import { MovieDialogComponent } from '../dialog/dialog.component';
 import { Movie, MovieService } from '../movie.service';
 import { Observable } from 'rxjs';
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 @Component({
   selector: 'app-movie',
-  imports: [PipesPipe, AddStarPipe, MatCardModule, MatButtonModule, NgFor, CommonModule],
+  imports: [PipesPipe, AddStarPipe, MatCardModule, MatButtonModule, NgIf, CommonModule],
   templateUrl: './movie.component.html',
   styleUrl: './movie.component.scss'
 })
 export class MovieComponent {
-movies$: Observable<Movie[]>;
+@Input() movie? : Movie;
 @Output() onMovieClick =new EventEmitter();
 
-constructor(public dialog: MatDialog, private movieService: MovieService){
-  this.movies$ = this.movieService.getMovies();
+constructor(public dialog: MatDialog){
 }
 
 movieClick(): void {
-  this.onMovieClick.emit(this.movies$);
-  console.log(this.movies$);
+  this.onMovieClick.emit(this.movie);
+  console.log(this.movie);
 
   this.dialog.open(MovieDialogComponent, {
-    data: this.movies$
+    data: this.movie
   });
 }
 }
